@@ -1,0 +1,92 @@
+/* 기본 페이지 설정 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header 스타일 */
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: left;
+    height: 15px;
+    align-items: center; /* 수직 중앙 정렬 */
+    z-index: 10; /* 헤더가 콘텐츠 위로 떠서 로고가 잘리지 않도록 */
+}
+
+.logo {
+    height: 30px; /* 로고의 크기에 맞게 조절하세요 */
+    width: auto;
+    padding: 25px 30px;
+}
+
+
+/* styles.css */
+.container {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+
+}
+
+.center-logo {
+    margin-top: 10%;
+    height: 75px; /* 로고 크기 조정 */
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #1c1c1c;
+    font-size: 18px; /* 텍스트 크기 조정 */
+    margin: 20px 0;
+    margin-bottom: 70px;
+}
+
+.login-link {
+    color: #919295;
+    font-size: 14px; /* 텍스트 크기 조정 */
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer 스타일 */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ACACAC;
+    font-size: 12px;
+    line-height: 2;
+}

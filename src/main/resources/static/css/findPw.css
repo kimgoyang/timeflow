@@ -1,0 +1,123 @@
+/* 기본 페이지 설정 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header 스타일 */
+header {
+    background-color: #f8f8f8;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: left;
+    height: 15px;
+    align-items: center; /* 수직 중앙 정렬 */
+    z-index: 10; /* 헤더가 콘텐츠 위로 떠서 로고가 잘리지 않도록 */
+}
+
+.logo {
+    height: 30px; /* 로고의 크기에 맞게 조절하세요 */
+    width: auto;
+    padding: 25px 30px;
+}
+
+/* styles.css */
+.contents {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1; /* 남은 공간을 모두 차지 */
+}
+
+h2 {
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 330px;
+    text-align: left;
+    position: relative;
+}
+
+label {
+    display: block;
+    color: #1C1C1C;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+    background-color: #F1F1F1;
+    color: #919295;
+}
+
+.find-id {
+    display: block;
+    text-align: right;
+    color: #3182f6;
+    margin-top: 5px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.find-id:hover {
+    text-decoration: underline;
+}
+
+.find-password-btn {
+    width: 115px;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: #3366FF;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.find-password-btn:hover {
+    background-color: #256ad8;
+}
+
+
+/* Footer 스타일 */
+footer {
+    height: auto; /* 고정된 높이 */
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 130px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ACACAC;
+    font-size: 12px;
+    line-height: 2;
+}

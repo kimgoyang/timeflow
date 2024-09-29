@@ -1,0 +1,115 @@
+/*
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #000;
+    padding: 10px;
+    padding-bottom: 20px;
+    text-align: left;
+    height: 15px;
+    align-items: center; !* 수직 중앙 정렬 *!
+}
+
+.logo {
+    height: 25px; !* 로고의 크기에 맞게 조절하세요 *!
+    width: auto;
+}
+
+!* .container 스타일 수정 *!
+.container {
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center; !* 수평 중앙 정렬 *!
+    justify-content: center; !* 수직 중앙 정렬 *!
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 300px; !* 입력 필드 너비 조정 *!
+    text-align: left;
+    position: relative;
+}
+
+label {
+    display: block;
+    color: #1C1C1C;
+    margin-bottom: 5px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background-color: #F1F1F1;
+    color: #919295;
+}
+
+#password-message {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.match {
+    color: green;
+}
+
+.no-match {
+    color: red;
+}
+
+.submit-btn {
+    width: 20%; !* 버튼 너비 조정 *!
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3182f6;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.submit-btn:hover {
+    background-color: #256ad8;
+}
+
+!* Footer 스타일 *!
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ACACAC;
+    font-size: 15px;
+    line-height: 2;
+}*/
