@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TimeFlow</title>
+        <link rel="stylesheet" href="/static/css/calendar.css">
+        <link rel="icon" href="/static/assets/icon/timeflow_icon_favicon.ico" type="image/x-icon">
+
+        <!-- 화면 해상도에 따라 글자 크기 대응(모바일 대응) -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <!-- jquery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- fullcalendar CDN -->
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+        <!-- fullcalendar 언어 CDN -->
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- 좌측 메뉴바 -->
+            <div class="sidebar">
+                <div class="menu-item home selected">
+                    <img src="/static/assets/calendar/calendar_home_blue.png" alt="홈 아이콘">
+                </div>
+                <div class="menu-item chat">
+                    <img src="/static/assets/calendar/calendar_chat_white.png" alt="채팅 아이콘">
+                </div>
+                <div class="menu-item mypage">
+                    <img src="/static/assets/calendar/calendar_user_icon_white.png" alt="마이페이지 아이콘">
+                </div>
+                <div class="menu-item settings" onclick="toggleLogout()">
+                    <img src="/static/assets/calendar/calendar_settings_icon_white.png" alt="설정 아이콘">
+                </div>
+            </div>
+
+            <!-- 로그아웃 버튼을 별도의 div로 설정 -->
+            <div class="logout-container">
+                <div class="logout-button" id="logout-button" style="display:none;">
+                    <img src="/static/assets/calendar/calendar_settings_icon_white.png" alt="설정 아이콘"> 로그아웃
+                </div>
+            </div>
+
+            <!-- 2번째 파트 - 동적으로 변화하는 부분 -->
+            <div class="content" id="content">
+                <!-- 홈 화면 -->
+                <div class="calendar-section" id="calendar-section">
+                    <h2>캘린더</h2>
+                    <button class="schedule-btn">일정 등록</button>
+                    <h3>
+                        <img src="/static/assets/calendar/calendar_list_icon.png" alt="목록 아이콘" class="list-icon"> 일정 목록
+                    </h3>
+                    <div class="schedule-list">
+                        <div class="schedule-item">
+                            <p>날짜: 2024-09-28</p>
+                            <p>일정 제목</p>
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 채팅 화면 (기본적으로 숨김 처리) -->
+                <div class="chat-section" id="chat-section" style="display: none;">
+                    <h2>채팅</h2>
+                    <button class="create-room-btn">방 만들기</button>
+                    <button class="invite-code-btn">초대코드 입력</button>
+                </div>
+            </div>
+
+            <!-- 3번째 파트 - 고정된 캘린더 -->
+            <div class="calendar-fixed">
+                <div id='calendar'></div>
+            </div>
+        </div>
+        <script src="/static/js/calendar.js"></script>
+    </body>
+</html>

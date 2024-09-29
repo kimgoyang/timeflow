@@ -1,0 +1,261 @@
+/* 전체 페이지 스타일 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 좌측 메뉴바 스타일 */
+.sidebar {
+    width: 55px;
+    background-color: #3366ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* 상단에 정렬 */
+    color: white;
+}
+
+/* 버튼 스타일 */
+.menu-item {
+    height: 25px;
+    text-align: center;
+    margin-bottom: 0; /* 버튼 간의 간격 제거 */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 15px; /* 버튼 내 패딩 추가 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+}
+
+/* 버튼별 위치 조정 */
+.menu-item.home {
+    margin-top: 46px;
+    order: 1; /* 첫 번째 버튼 */
+    margin-bottom: 5px;
+}
+
+.menu-item.chat {
+    order: 2; /* 두 번째 버튼 */
+    margin-bottom: 5px;
+}
+
+.menu-item.mypage {
+    order: 3; /* 세 번째 버튼 */
+}
+
+.menu-item.settings {
+    order: 4; /* 네 번째 버튼 (하단 고정) */
+    margin-bottom: 5px;
+    margin-top: auto; /* 하단에 고정 */
+}
+
+/* 선택되지 않은 버튼: 파란색 배경, 흰색 이미지 */
+.menu-item {
+    background-color: #3366ff;
+    color: white;
+}
+
+.menu-item img {
+    width: 23px;
+    height: 23px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-item img.icon {
+    filter: brightness(0) invert(1); /* 흰색 이미지로 변환 */
+}
+
+/* 선택된 버튼: 흰색 배경, 파란색 이미지 */
+.menu-item.selected {
+    background-color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 그림자 효과 추가 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 기본 그림자 */
+    color: #3366ff;
+}
+
+.menu-item.selected img.icon {
+    filter: none; /* 원래 이미지 색상 유지 */
+}
+
+/* 텍스트 숨기기 */
+.menu-item p {
+    font-size: 0; /* 텍스트 숨기기 */
+}
+
+/* 선택된 버튼의 텍스트도 숨기기 */
+.menu-item.selected p {
+    font-size: 0; /* 텍스트 숨기기 */
+}
+
+/* 2번째 파트 스타일 */
+.content {
+    width: 280px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* 캘린더 섹션 */
+.list-icon {
+    width: 30px; /* 원하는 너비로 조정 */
+    height: auto; /* 비율을 유지하려면 height를 auto로 설정 */
+    margin-right: 0px; /* 텍스트와의 간격 조정 */
+    vertical-align: middle; /* 텍스트와 정렬 */
+}
+
+.calendar-section h2, .chat-section h2 {
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: #4F4E4E;
+}
+
+.calendar-section h3 {
+    font-size: 18px;
+    color: #4F4E4E;
+}
+
+.schedule-btn, .create-room-btn, .invite-code-btn {
+    background-color: #3366ff;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 280px;
+    padding: 0px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: 0px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 그림자 효과 추가 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* 기본 그림자 */
+}
+
+.schedule-btn:hover, .create-room-btn:hover, .invite-code-btn:hover {
+    background-color: #274b99;
+}
+
+.schedule-list {
+    margin-top: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* 채팅 섹션 */
+.chat-section {
+    display: none;
+}
+
+.chat-section button {
+    margin-right: 10px;
+}
+
+/* 3번째 파트 - 고정된 캘린더 */
+.calendar-fixed {
+    flex: 6;
+    background-color: #e9e9e9;
+    padding: 40px;
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-container {
+    position: absolute; /* 절대 위치 지정 */
+    bottom: 25px; /* 상단에서의 위치 */
+    left: 75px; /* 오른쪽에서의 위치 */
+    z-index: 10; /* 다른 요소보다 위에 위치 */
+}
+
+.logout-button img {
+    width: 23px;
+    height: 23px;
+    display: block;
+    margin: 0 auto;
+}
+
+.logout-button {
+    background-color: #3366FF;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 버튼 hover 효과 */
+.logout-button:hover {
+    background-color: darkgray; /* hover 시 색상 변경 */
+}
+
+/* calendar */
+
+/* 캘린더 상단 툴바 스타일 */
+.fc-toolbar.fc-header-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 뷰 버튼 스타일 */
+.fc-button {
+    background-color: #CACACA;
+    border: none;
+    color: black;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* 선택된 뷰 버튼 */
+.fc-button-active {
+    background-color: #4F4E4E !important;
+    color: white !important;
+}
+
+/* 오늘 버튼 */
+.fc-today-button {
+    background-color: #356EC4;
+    color: white;
+    border-radius: 5px;
+}
+
+/* 검색창 스타일 */
+.search-bar {
+    border: 1px solid #D9D9D9;
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 200px;
+    color: #1E1E1E;
+}
+
+/* 날짜 숫자의 위치를 좌측 상단으로 변경 */
+.fc-daygrid-day-top {
+    justify-content: left; /* 좌측 정렬 */
+    padding-left: 5px; /* 왼쪽 여백 추가 */
+}
+
+/* 요일이 일요일인 날짜 강조 */
+.fc-daygrid-day.fc-day-sun .fc-daygrid-day-top {
+    color: red; /* 일요일 날짜 빨간색 */
+}
